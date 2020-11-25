@@ -195,9 +195,9 @@
             // scoreButton
             // 
             this.scoreButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.scoreButton.FlatAppearance.BorderSize = 7;
-            this.scoreButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.scoreButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.scoreButton.FlatAppearance.BorderSize = 4;
+            this.scoreButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.scoreButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.scoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.scoreButton.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scoreButton.ForeColor = System.Drawing.Color.SteelBlue;
