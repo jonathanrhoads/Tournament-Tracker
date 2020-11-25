@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TournamentViewerForm));
-            this.headerLabel = new System.Windows.Forms.Label();
+            this.tournamentLabel = new System.Windows.Forms.Label();
             this.tournamentName = new System.Windows.Forms.Label();
             this.roundLabel = new System.Windows.Forms.Label();
             this.roundDropDown = new System.Windows.Forms.ComboBox();
@@ -45,17 +45,17 @@
             this.scoreButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // headerLabel
+            // tournamentLabel
             // 
-            this.headerLabel.AutoSize = true;
-            this.headerLabel.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerLabel.ForeColor = System.Drawing.Color.SteelBlue;
-            this.headerLabel.Location = new System.Drawing.Point(10, 27);
-            this.headerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(214, 50);
-            this.headerLabel.TabIndex = 0;
-            this.headerLabel.Text = "Tournament:";
+            this.tournamentLabel.AutoSize = true;
+            this.tournamentLabel.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tournamentLabel.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tournamentLabel.Location = new System.Drawing.Point(10, 27);
+            this.tournamentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tournamentLabel.Name = "tournamentLabel";
+            this.tournamentLabel.Size = new System.Drawing.Size(214, 50);
+            this.tournamentLabel.TabIndex = 0;
+            this.tournamentLabel.Text = "Tournament:";
             // 
             // tournamentName
             // 
@@ -227,7 +227,7 @@
             this.Controls.Add(this.roundDropDown);
             this.Controls.Add(this.roundLabel);
             this.Controls.Add(this.tournamentName);
-            this.Controls.Add(this.headerLabel);
+            this.Controls.Add(this.tournamentLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
@@ -240,7 +240,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label headerLabel;
+        private System.Windows.Forms.Label tournamentLabel;
         private System.Windows.Forms.Label tournamentName;
         private System.Windows.Forms.Label roundLabel;
         private System.Windows.Forms.ComboBox roundDropDown;
