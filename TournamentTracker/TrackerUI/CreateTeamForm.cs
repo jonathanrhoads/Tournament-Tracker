@@ -16,5 +16,30 @@ namespace TrackerUI
         {
             InitializeComponent();
         }
+
+        private void createTeamLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void teamNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void selectTeamMemberLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void firstNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addTeamMemberButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
