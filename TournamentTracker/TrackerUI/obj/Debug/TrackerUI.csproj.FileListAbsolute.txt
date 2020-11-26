@@ -12,3 +12,6 @@ C:\Users\jonat\Source\Repos\jonathanrhoads\Tournament-Tracker\TournamentTracker\
 C:\Users\jonat\Source\Repos\jonathanrhoads\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.CreateTeamForm.resources
 C:\Users\jonat\Source\Repos\jonathanrhoads\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.CreateTournament.resources
 C:\Users\jonat\Source\Repos\jonathanrhoads\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.TournamentDashboardForm.resources
+C:\Users\jonat\source\repos\jonathanrhoads\Tournament-Tracker\TournamentTracker\TrackerUI\bin\Debug\TrackerLibrary.dll
+C:\Users\jonat\source\repos\jonathanrhoads\Tournament-Tracker\TournamentTracker\TrackerUI\bin\Debug\TrackerLibrary.pdb
+C:\Users\jonat\source\repos\jonathanrhoads\Tournament-Tracker\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.csproj.CopyComplete
