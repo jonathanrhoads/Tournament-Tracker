@@ -4,3 +4,6 @@ C:\Users\jonat\source\repos\jonathanrhoads\Tournament-Tracker\TournamentTracker\
 C:\Users\jonat\source\repos\jonathanrhoads\Tournament-Tracker\TournamentTracker\TrackerLibrary\obj\Debug\TrackerLibrary.csproj.CoreCompileInputs.cache
 C:\Users\jonat\source\repos\jonathanrhoads\Tournament-Tracker\TournamentTracker\TrackerLibrary\obj\Debug\TrackerLibrary.dll
 C:\Users\jonat\source\repos\jonathanrhoads\Tournament-Tracker\TournamentTracker\TrackerLibrary\obj\Debug\TrackerLibrary.pdb
+C:\Users\jonat\Source\Repos\jonathanrhoads\Tournament-Tracker\TournamentTracker\TrackerLibrary\bin\Debug\Dapper.dll
+C:\Users\jonat\Source\Repos\jonathanrhoads\Tournament-Tracker\TournamentTracker\TrackerLibrary\bin\Debug\Dapper.xml
+C:\Users\jonat\Source\Repos\jonathanrhoads\Tournament-Tracker\TournamentTracker\TrackerLibrary\obj\Debug\TrackerLibrary.csproj.CopyComplete
