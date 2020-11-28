@@ -56,7 +56,7 @@
             this.teamNameValue.Location = new System.Drawing.Point(20, 149);
             this.teamNameValue.Name = "teamNameValue";
             this.teamNameValue.Size = new System.Drawing.Size(482, 35);
-            this.teamNameValue.TabIndex = 16;
+            this.teamNameValue.TabIndex = 1;
             // 
             // teamNameLabel
             // 
@@ -109,7 +109,7 @@
             this.addTeamMemberButton.Location = new System.Drawing.Point(147, 304);
             this.addTeamMemberButton.Name = "addTeamMemberButton";
             this.addTeamMemberButton.Size = new System.Drawing.Size(222, 42);
-            this.addTeamMemberButton.TabIndex = 21;
+            this.addTeamMemberButton.TabIndex = 3;
             this.addTeamMemberButton.Text = "Add Member";
             this.addTeamMemberButton.UseVisualStyleBackColor = true;
             this.addTeamMemberButton.Click += new System.EventHandler(this.addTeamMemberButton_Click);
@@ -121,7 +121,7 @@
             this.selectTeamMemberDropDown.Margin = new System.Windows.Forms.Padding(4);
             this.selectTeamMemberDropDown.Name = "selectTeamMemberDropDown";
             this.selectTeamMemberDropDown.Size = new System.Drawing.Size(482, 38);
-            this.selectTeamMemberDropDown.TabIndex = 20;
+            this.selectTeamMemberDropDown.TabIndex = 2;
             // 
             // addNewMemberGroupBox
             // 
@@ -155,7 +155,7 @@
             this.createMemberButton.Location = new System.Drawing.Point(127, 302);
             this.createMemberButton.Name = "createMemberButton";
             this.createMemberButton.Size = new System.Drawing.Size(222, 42);
-            this.createMemberButton.TabIndex = 22;
+            this.createMemberButton.TabIndex = 9;
             this.createMemberButton.Text = "Create Member";
             this.createMemberButton.UseVisualStyleBackColor = true;
             this.createMemberButton.Click += new System.EventHandler(this.createMemberButton_Click);
@@ -165,7 +165,7 @@
             this.lastNameValue.Location = new System.Drawing.Point(159, 119);
             this.lastNameValue.Name = "lastNameValue";
             this.lastNameValue.Size = new System.Drawing.Size(300, 43);
-            this.lastNameValue.TabIndex = 19;
+            this.lastNameValue.TabIndex = 6;
             // 
             // lastNameLabel
             // 
@@ -184,7 +184,7 @@
             this.emailValue.Location = new System.Drawing.Point(159, 174);
             this.emailValue.Name = "emailValue";
             this.emailValue.Size = new System.Drawing.Size(300, 43);
-            this.emailValue.TabIndex = 17;
+            this.emailValue.TabIndex = 7;
             // 
             // emailLabel
             // 
@@ -203,7 +203,8 @@
             this.cellphoneValue.Location = new System.Drawing.Point(159, 229);
             this.cellphoneValue.Name = "cellphoneValue";
             this.cellphoneValue.Size = new System.Drawing.Size(300, 43);
-            this.cellphoneValue.TabIndex = 15;
+            this.cellphoneValue.TabIndex = 8;
+            this.cellphoneValue.TextChanged += new System.EventHandler(this.cellphoneValue_TextChanged);
             // 
             // cellphoneLabel
             // 
@@ -222,7 +223,7 @@
             this.firstNameValue.Location = new System.Drawing.Point(159, 67);
             this.firstNameValue.Name = "firstNameValue";
             this.firstNameValue.Size = new System.Drawing.Size(300, 43);
-            this.firstNameValue.TabIndex = 13;
+            this.firstNameValue.TabIndex = 5;
             // 
             // firstNameLabel
             // 
@@ -258,7 +259,7 @@
             this.deleteSelectedPlayerButton.Location = new System.Drawing.Point(886, 387);
             this.deleteSelectedPlayerButton.Name = "deleteSelectedPlayerButton";
             this.deleteSelectedPlayerButton.Size = new System.Drawing.Size(142, 85);
-            this.deleteSelectedPlayerButton.TabIndex = 25;
+            this.deleteSelectedPlayerButton.TabIndex = 10;
             this.deleteSelectedPlayerButton.Text = "Delete Selected";
             this.deleteSelectedPlayerButton.UseVisualStyleBackColor = true;
             // 
@@ -274,7 +275,7 @@
             this.createTeamButton.Location = new System.Drawing.Point(336, 787);
             this.createTeamButton.Name = "createTeamButton";
             this.createTeamButton.Size = new System.Drawing.Size(355, 75);
-            this.createTeamButton.TabIndex = 28;
+            this.createTeamButton.TabIndex = 11;
             this.createTeamButton.Text = "Create Team";
             this.createTeamButton.UseVisualStyleBackColor = true;
             this.createTeamButton.Click += new System.EventHandler(this.createTeamButton_Click);
