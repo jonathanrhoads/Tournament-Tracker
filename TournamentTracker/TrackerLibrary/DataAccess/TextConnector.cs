@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TrackerLibrary.Models;
 using TrackerLibrary.DataAccess.TextHelpers;
+using TrackerLibrary.Models;
 
 namespace TrackerLibrary.DataAccess
 {
@@ -12,9 +9,7 @@ namespace TrackerLibrary.DataAccess
     {
         private const string PrizesFile = "PrizeModels.csv";
 
-
         // TODO - Wire up the CreatePrize for text files.
-
 
         /// <summary>
         /// Saves a new prize to the text file.
@@ -30,7 +25,7 @@ namespace TrackerLibrary.DataAccess
             // Find the ID
             int currentId = 1;
 
-            if(prizes.Count > 0)
+            if (prizes.Count > 0)
             {
                 currentId = prizes.OrderByDescending(x => x.Id).First().Id + 1;
             }
@@ -40,14 +35,11 @@ namespace TrackerLibrary.DataAccess
             // Add the new record with the new ID (max + 1)
             prizes.Add(model);
 
-
             // Convert the prizes to a List<string>
             prizes.SaveToPrizeFile(PrizesFile);
             return model;
-            
+
             // Save the List<string> to the text file
-
-
         }
     }
 }

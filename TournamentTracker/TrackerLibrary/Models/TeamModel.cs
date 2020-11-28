@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System;
 
 namespace TrackerLibrary.Models
 {
@@ -14,7 +13,5 @@ namespace TrackerLibrary.Models
         /// The name of the team.
         /// </summary>
         public string TeamName { get; set; }
-
-        
     }
 }

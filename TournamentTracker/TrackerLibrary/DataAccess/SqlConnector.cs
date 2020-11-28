@@ -1,10 +1,5 @@
 ﻿using Dapper;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TrackerLibrary.Models;
 
 // @PlaceNumber int,
@@ -12,8 +7,6 @@ using TrackerLibrary.Models;
 // @PrizeAmount money,
 // @PrizePercentage float,
 // @id int = 0 output
-
-
 
 namespace TrackerLibrary.DataAccess
 {
@@ -42,7 +35,6 @@ namespace TrackerLibrary.DataAccess
 
                 return model;
             }
-
         }
     }
 }

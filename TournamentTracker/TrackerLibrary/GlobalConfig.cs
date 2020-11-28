@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Configuration;
 using TrackerLibrary.DataAccess;
 using static TrackerLibrary.Enums;
 
@@ -20,7 +15,8 @@ namespace TrackerLibrary
                 // TODO - Set up the SQL Connector properly.
                 SqlConnector sql = new SqlConnector();
                 Connection = sql;
-            } else if (db == DatabaseType.TextFile)
+            }
+            else if (db == DatabaseType.TextFile)
             {
                 // TODO - Set up the Text File connector properly.
                 TextConnector text = new TextConnector();

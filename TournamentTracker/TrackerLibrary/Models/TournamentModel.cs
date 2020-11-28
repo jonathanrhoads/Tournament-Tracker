@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace TrackerLibrary.Models
 {
@@ -32,7 +28,5 @@ namespace TrackerLibrary.Models
         /// The matchups for each round.
         /// </summary>
         public List<List<MatchupModel>> Rounds { get; set; } = new List<List<MatchupModel>>();
-
-
     }
 }
