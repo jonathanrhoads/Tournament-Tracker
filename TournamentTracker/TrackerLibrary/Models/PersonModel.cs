@@ -26,5 +26,11 @@
         /// The players cell phone number.
         /// </summary>
         public string CellphoneNumber { get; set; }
+
+        public string FullName
+        {
+            get { return $"{FirstName} {LastName}"; }
+        }
+
     }
 }

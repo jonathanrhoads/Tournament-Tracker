@@ -1,5 +1,7 @@
 ﻿using Dapper;
+using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using TrackerLibrary.Models;
 
 // @PlaceNumber int,
@@ -54,6 +56,17 @@ namespace TrackerLibrary.DataAccess
 
                 return model;
             }
+        }
+
+        public List<PersonModel> getPerson_All()
+        {
+            List<PersonModel> output;
+            using(IDbConnection connection = new System.Data.SqlClient.SqlConnection
+                (GlobalConfig.CnnString("Tournaments")))
+            {
+                output = connection.Query<PersonModel>("dbo.spPeople_GetAll").ToList();
+            }
+            return output;
         }
     }
 }

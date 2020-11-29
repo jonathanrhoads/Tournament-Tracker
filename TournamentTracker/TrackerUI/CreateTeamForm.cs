@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using TrackerLibrary;
 using TrackerLibrary.Models;
@@ -7,9 +8,35 @@ namespace TrackerUI
 {
     public partial class CreateTeamForm : Form
     {
+
+        private List<PersonModel> availableTeamMembers = new List<PersonModel>();
+        private List<PersonModel> selectedTeamMembers = new List<PersonModel>();
+
         public CreateTeamForm()
         {
             InitializeComponent();
+            
+            //CreateSampleData();
+            
+            wireUpLists();
+        }
+
+        private void wireUpLists()
+        {
+            selectTeamMemberDropDown.DataSource = availableTeamMembers;
+            selectTeamMemberDropDown.DisplayMember = "FullName";
+
+            teamMembersListBox.DataSource = selectedTeamMembers;
+            teamMembersListBox.DisplayMember = "FullName";
+        }
+
+        private void CreateSampleData()
+        {
+            availableTeamMembers.Add(new PersonModel {FirstName = "Jon", LastName = "Rhoads" });
+            availableTeamMembers.Add(new PersonModel { FirstName = "Jane", LastName = "Smith" });
+
+            selectedTeamMembers.Add(new PersonModel { FirstName = "Denzel", LastName = "Washington" });
+            selectedTeamMembers.Add(new PersonModel { FirstName = "Dwayne", LastName = "Johnson" });
         }
 
         private void createTeamLabel_Click(object sender, EventArgs e)
@@ -90,5 +117,12 @@ namespace TrackerUI
         {
 
         }
+
+        private void teamMembersListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
