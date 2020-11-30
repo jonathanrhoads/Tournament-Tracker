@@ -105,7 +105,11 @@ namespace TrackerUI
                 p.EmailAddress = emailValue.Text;
                 p.CellphoneNumber = cellphoneValue.Text;
 
-                GlobalConfig.Connection.CreatePerson(p);
+                p = GlobalConfig.Connection.CreatePerson(p);
+
+                selectedTeamMembers.Add(p);
+
+                wireUpLists();
 
                 firstNameValue.Text = "";
                 lastNameValue.Text = "";
@@ -116,6 +120,8 @@ namespace TrackerUI
             {
                 MessageBox.Show("This form has invalid information. Please check it and try again.");
             }
+
+
         }
 
         private bool ValidateForm()
