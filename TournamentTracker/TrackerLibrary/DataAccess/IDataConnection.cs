@@ -9,6 +9,6 @@ namespace TrackerLibrary.DataAccess
 
         PersonModel CreatePerson(PersonModel model);
 
-        List<PersonModel> getPerson_All();
+        List<PersonModel> GetPerson_All();
     }
 }

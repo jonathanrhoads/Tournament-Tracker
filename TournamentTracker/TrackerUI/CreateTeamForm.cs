@@ -9,7 +9,7 @@ namespace TrackerUI
     public partial class CreateTeamForm : Form
     {
 
-        private List<PersonModel> availableTeamMembers = new List<PersonModel>();
+        private List<PersonModel> availableTeamMembers = GlobalConfig.Connection.GetPerson_All();
         private List<PersonModel> selectedTeamMembers = new List<PersonModel>();
 
         public CreateTeamForm()
@@ -23,8 +23,14 @@ namespace TrackerUI
 
         private void wireUpLists()
         {
+
+
+            selectTeamMemberDropDown.DataSource = null;
+
             selectTeamMemberDropDown.DataSource = availableTeamMembers;
             selectTeamMemberDropDown.DisplayMember = "FullName";
+
+            teamMembersListBox.DataSource = null;
 
             teamMembersListBox.DataSource = selectedTeamMembers;
             teamMembersListBox.DisplayMember = "FullName";
@@ -57,8 +63,29 @@ namespace TrackerUI
 
         private void addTeamMemberButton_Click(object sender, EventArgs e)
         {
-        }
+            PersonModel p = (PersonModel)selectTeamMemberDropDown.SelectedItem;
 
+            if (p != null)
+            {
+                availableTeamMembers.Remove(p);
+                selectedTeamMembers.Add(p);
+
+                wireUpLists(); 
+            }
+            
+        }
+        private void removeSelectedPlayerButton_Click(object sender, EventArgs e)
+        {
+            PersonModel p = (PersonModel)teamMembersListBox.SelectedItem;
+
+            if (p != null)
+            {
+                selectedTeamMembers.Remove(p);
+                availableTeamMembers.Add(p);
+
+                wireUpLists(); 
+            }
+        }
         private void CreateTeamForm_Load(object sender, EventArgs e)
         {
         }
