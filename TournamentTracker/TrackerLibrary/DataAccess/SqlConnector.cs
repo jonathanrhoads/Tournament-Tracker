@@ -93,7 +93,46 @@ namespace TrackerLibrary.DataAccess
                 SaveTournament(connection, model);
                 SaveTournamentPrizes(connection, model);
                 SaveTournamentEntries(connection, model);
+                SaveTournamentRounds(connection, model);
    
+            }
+        }
+        private void SaveTournamentRounds(IDbConnection connection, TournamentModel model)
+        {
+            // List<List<MatchupModel>> Rounds
+            // List<MatchupEntryModel> Entries
+
+            // Loop through the rounds.
+            // Loop through the matchups.
+            // Save the matchup
+            // Loop throught the entries and save them.
+
+            foreach (List<MatchupModel> round in model.Rounds)
+            {
+                foreach (MatchupModel matchup in round)
+                {
+                    var p = new DynamicParameters();
+                  
+                    p.Add("@TournamentId", model.Id);
+                    p.Add("@MatchupRound", matchup.MatchupRound);
+                    p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                    connection.Execute("dbo.spMatchups_Insert", p, commandType: CommandType.StoredProcedure);
+
+                    matchup.Id = p.Get<int>("@id");
+
+                    foreach(MatchupEntryModel entry in matchup.Entries)
+                    {
+                    
+                        p = new DynamicParameters();
+                        p.Add("@MatchupId", matchup.Id);
+                        p.Add("@ParentMatchupId", entry.ParentMatchup);
+                        p.Add("@TeamCompetingId", entry.TeamCompeting.Id);
+                        p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                        connection.Execute("dbo.spMatchupEntries_Insert", p, commandType: CommandType.StoredProcedure);
+                    }
+                }
             }
         }
         private void SaveTournamentEntries(IDbConnection connection, TournamentModel model)

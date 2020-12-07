@@ -22,6 +22,6 @@ namespace TrackerLibrary.Models
         /// <summary>
         /// Represents the integer value of the round.
         /// </summary>
-        public int MatchRound { get; set; }
+        public int MatchupRound { get; set; }
     }
 }
