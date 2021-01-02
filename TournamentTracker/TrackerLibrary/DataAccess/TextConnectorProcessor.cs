@@ -287,7 +287,6 @@ namespace TrackerLibrary.DataAccess.TextHelpers
 
                 }
             }
-
         }
 
         public static List<MatchupEntryModel> ConvertToMatchupEntryModels(this List<string> lines)
@@ -365,7 +364,15 @@ namespace TrackerLibrary.DataAccess.TextHelpers
                 MatchupModel p = new MatchupModel();
                 p.Id = int.Parse(cols[0]);
                 p.Entries = ConvertStringToMatchupEntryModels(cols[1]);
-                p.Winner = LookupTeamById(int.Parse(cols[2]));
+                if (cols[2].Length == 0)
+                {
+                    p.Winner = null;
+
+                }
+                else
+                {
+                    p.Winner = LookupTeamById(int.Parse(cols[2]));
+                }
                 p.MatchupRound = int.Parse(cols[3]);
 
                 output.Add(p);
@@ -388,6 +395,9 @@ namespace TrackerLibrary.DataAccess.TextHelpers
 
             matchup.Id = currentId;
 
+            matchups.Add(matchup);
+
+            
             foreach (MatchupEntryModel entry in matchup.Entries)
             {
                 entry.SaveEntryToFile(matchupEntryFile);
